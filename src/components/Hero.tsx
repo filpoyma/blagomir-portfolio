@@ -43,7 +43,7 @@ function Portrait() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-4%", "4%"]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-2%", "12%"]);
 
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
     const r = ref.current?.getBoundingClientRect();
