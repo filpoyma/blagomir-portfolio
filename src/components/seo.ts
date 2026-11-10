@@ -1,7 +1,8 @@
+import { site } from "../configs/settings";
 import { brand, links, sections, teacher } from "./content";
 
 export const SITE_NAME = brand.name;
-export const DEFAULT_SITE_URL = "https://dharma108.ru";
+export const DEFAULT_SITE_URL = site.url;
 
 export const SEO_KEYWORDS = [
   "Свами Благомир",
@@ -104,7 +105,7 @@ export function buildHomeJsonLd(siteOrigin: string) {
         logo: `${origin}/sites/tutor-page/favicon.svg`,
         description: sections.school.text,
         founder: { "@id": personId },
-        sameAs: [links.telegramOpen, links.school, links.youtubeStart],
+        sameAs: [links.telegramOpen, links.school, links.youtube],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Программы и форматы обучения ДХАРМА108",
