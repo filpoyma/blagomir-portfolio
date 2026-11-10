@@ -1,11 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { PrivacyPage } from "../components/pages/PrivacyPage";
+import { buildPrivacyJsonLd, DEFAULT_SITE_URL } from "../components/seo";
+
+const siteOrigin = Astro.site?.origin ?? DEFAULT_SITE_URL;
+const jsonLd = buildPrivacyJsonLd(siteOrigin);
 ---
 
 <Layout
   title="Политика конфиденциальности — ДХАРМА108"
   description="Политика конфиденциальности сайта ДХАРМА108: какие данные обрабатываются, цели обработки, права пользователей и контакты."
+  canonicalPath="/politika-konfidencialnosti"
+  jsonLd={jsonLd}
 >
   <PrivacyPage client:load />
 </Layout>

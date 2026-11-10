@@ -1,11 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { TutorPage } from "../components/pages/TutorPage";
+import { buildHomeJsonLd, DEFAULT_SITE_URL } from "../components/seo";
+
+const siteOrigin = Astro.site?.origin ?? DEFAULT_SITE_URL;
+const jsonLd = buildHomeJsonLd(siteOrigin);
 ---
 
 <Layout
   title="Свами Благомир — ДХАРМА108 | Путь Дхармы, Школа, программы и контакты"
   description="Личный сайт-навигатор Свами Благомира Шиванатха Тапасви, Хранителя Шива Дева-Парампары. Духовное знание, осознанная практика и система «Путь Дхармы»: YouTube, открытый Telegram, Школа ДХАРМА108, личные форматы, книги и ретриты."
+  canonicalPath="/"
+  ogType="profile"
+  jsonLd={jsonLd}
 >
   <TutorPage client:load />
 </Layout>

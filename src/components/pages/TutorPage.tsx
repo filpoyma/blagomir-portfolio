@@ -12,6 +12,7 @@ import { Courses } from "../Courses";
 import { Books } from "../Books";
 import { Retreats } from "../Retreats";
 import { Parampara } from "../Parampara";
+import { Faq } from "../Faq";
 import { Footer } from "../Footer";
 
 export function TutorPage() {
@@ -64,6 +65,7 @@ export function TutorPage() {
         <Books />
         <Retreats />
         <Parampara />
+        <Faq />
       </main>
       <Footer />
     </>
