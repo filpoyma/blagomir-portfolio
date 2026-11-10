@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+
+  --color-gold: #d4af37;
+  --color-goldhover: #c59b27;
+  --color-goldlight: #fdf8e7;
+  --color-deep: #0f172a;
+  --color-ivory: #faf6ee;
+  --color-ink: #0c1322;
+  --color-saffron: #d9531e;
+  --color-linec: #e7e0d2;
+  --color-card: #fffdf9;
+  --color-card-foreground: #0f172a;
+  --color-border: #e7e0d2;
+  --color-ring: #d4af37;
+  --color-background: #faf6ee;
+  --color-foreground: #1e293b;
+}
+
+/* Lenis smooth-scroll base */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch],
+.lenis [data-lenis-prevent-vertical],
+.lenis [data-lenis-prevent-horizontal] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans antialiased;
+  }
+
+  body {
+    @apply min-h-full bg-ivory text-deep;
+    font-family: "Manrope", system-ui, sans-serif;
+    background-color: #faf6ee;
+    color: #1e293b;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #0f172a;
+  }
+
+  :focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10;
+  }
+
+  .kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.28em];
+  }
+
+  .btn-gold {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 bg-gold px-6 text-sm font-semibold tracking-wide text-deep transition-colors duration-200 hover:bg-goldhover;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 border border-ivory/30 px-6 text-sm font-semibold tracking-wide text-ivory transition-colors duration-200 hover:border-gold hover:text-gold;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 border border-deep/20 px-6 text-sm font-semibold tracking-wide text-deep transition-colors duration-200 hover:border-gold hover:text-goldhover;
+  }
+
+  .card-light {
+    @apply rounded-xl border border-deep/10 bg-card;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-track {
+    animation: marquee 52s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-paused:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}

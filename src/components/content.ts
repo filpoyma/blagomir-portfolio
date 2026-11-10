@@ -1,0 +1,231 @@
+// ДХАРМА108 — page content registry
+
+const asset = (file: string) => `/sites/tutor-page/images/${file}`;
+
+export const brand = {
+  name: "ДХАРМА108",
+  parampara: "Шива Дева-Парампара",
+};
+
+export const teacher = {
+  name: "Свами Благомир",
+  fullName: "Свами Благомир Шиванатха Тапасви",
+  role: "Хранитель Шива Дева-Парампары",
+  thesis:
+    "Духовное знание, осознанная практика и система «Путь Дхармы». Познакомьтесь с учением, присоединитесь к Школе ДХАРМА108 или выберите личный формат работы.",
+  photo: asset("teacher_hero.webp"),
+  photoMobile: asset("teacher_mobile.webp"),
+  photoSquare: asset("teacher_square.webp"),
+  photoAlt:
+    "Портрет Свами Благомира Шиванатха Тапасви с тилакой и рудракша-малой на фоне горных вершин в золотом закатном свете",
+};
+
+export const links = {
+  youtube:
+    "https://www.youtube.com/@%D0%A1%D0%B2%D0%B0%D0%BC%D0%B8%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BC%D0%B8%D1%80%D0%A8%D0%B8%D0%B2%D0%B0%D0%BD%D0%B0%D1%82%D1%85%D0%B0%D0%A2%D0%B0%D0%BF%D0%B0%D1%81%D0%B2%D0%B8",
+  telegramOpen: "https://t.me/vedabali",
+  school: "https://t.me/grinkovbot",
+  telegramPersonal: "https://t.me/blagomir_dharma",
+  bookSacral:
+    "https://www.litres.ru/book/blagomir-grin-kov-34081892/sakral-naia-numerologiia-74522973/",
+  bookWolf:
+    "https://www.litres.ru/book/blagomir-grin-kov-34081892/belyi-volk-74523127/",
+  bookMantras:
+    "https://www.litres.ru/book/blagomir-grin-kov-34081892/velikie-mantry-upanishad-74522922/",
+  authorLitres: "https://www.litres.ru/author/blagomir-grin-kov-34081892/",
+  retreats: "https://dharma-retreat.org/",
+};
+
+export const heroCta = [
+  { num: "01", label: "Начать знакомство", hint: "YouTube • Telegram", href: "#start" },
+  { num: "02", label: "Учиться", hint: "Школа • программы", href: "#school" },
+  { num: "03", label: "Личная работа", hint: "Консультации • круг", href: "#formats" },
+];
+
+export const marqueeItems = [
+  "Священная простота",
+  "Осознанная практика",
+  "Путь Дхармы",
+  "Шива Дева-Парампара",
+  "Самопознание",
+  "ДХАРМА108",
+];
+
+export const navLinks = [
+  { label: "Система", href: "#dharma" },
+  { label: "Школа", href: "#school" },
+  { label: "Форматы", href: "#formats" },
+  { label: "Книги", href: "#books" },
+  { label: "Ретриты", href: "#retreats" },
+];
+
+export const sections = {
+  start: {
+    num: "01",
+    kicker: "Начните здесь",
+    title: "Одна кнопка до знакомства",
+    text: "Короткий маршрут для нового гостя: видео и открытый канал — самый простой способ понять, кто перед вами и о чём это учение.",
+  },
+  dharma: {
+    num: "02",
+    kicker: "Система",
+    title: "Система «Путь Дхармы»",
+    text: "Единая логика обучения: от первого знакомства с учением — к осознанной практике и служению. Каждый шаг имеет ясное место в последовательности.",
+    steps: [
+      {
+        num: "I",
+        title: "Знание",
+        text: "Изучение основ учения и писаний в ясной, живой подаче.",
+      },
+      {
+        num: "II",
+        title: "Практика",
+        text: "Ежедневные осознанные практики, которые собирают внимание и дисциплину.",
+      },
+      {
+        num: "III",
+        title: "Служение",
+        text: "Применение знания в жизни: семье, деле и сообществе.",
+      },
+    ],
+  },
+  school: {
+    num: "03",
+    kicker: "Школа ДХАРМА108",
+    title: "Основной маршрут вступления",
+    text: "Единая среда обучения, где учение собрано в последовательную программу.",
+    inside: ["Писания", "Лекции", "Практика", "Сообщество"],
+    cta: "Присоединиться к Школе",
+  },
+  formats: {
+    num: "04",
+    kicker: "Личная работа",
+    title: "Личные форматы",
+    text: "Работа один на один и в малой группе — для тех, кому нужен индивидуальный темп и глубина.",
+    items: [
+      {
+        title: "Neo PSY",
+        text: "Авторский метод Благомира: работа с сознанием и внутренней опорой.",
+      },
+      {
+        title: "Джйотиш",
+        text: "Ведическая наука о светилах: разбор карты как инструмент самопознания.",
+      },
+      {
+        title: "Закрытый круг",
+        text: "Углублённая практика в малой группе учеников.",
+      },
+    ],
+  },
+  courses: {
+    num: "05",
+    kicker: "Курсы и программы",
+    title: "Программы обучения",
+    items: [
+      {
+        title: "«Путь Дхармы» — вводная программа",
+        text: "Основы системы и последовательность обучения.",
+        href: "https://t.me/vedabali/36915",
+      },
+      {
+        title: "Neo PSY — курс по методу",
+        text: "Практическое освоение авторского метода.",
+        href: "https://t.me/vedabali/1790",
+      },
+      {
+        title: "Джйотиш — программа изучения",
+        text: "От астрологической карты — к пониманию себя.",
+        href: "https://t.me/vedabali/3542",
+      },
+    ],
+  },
+  books: {
+    num: "06",
+    kicker: "Книги и аудио",
+    title: "Читать и слушать",
+    items: [
+      {
+        title: "Сакральная нумерология",
+        text: "Все тайны чисел в одной книге: смысл чисел в характере и судьбе.",
+        platform: "Читать на Литрес",
+        href: links.bookSacral,
+        cover: asset("book_cover.webp"),
+        alt: "Обложка книги «Сакральная нумерология» — Благомир Гриньков, все тайны чисел в одной книге",
+      },
+      {
+        title: "Белый волк",
+        text: "Мистериальная повесть — художественное повествование о пути через испытания.",
+        platform: "Читать на Литрес",
+        href: links.bookWolf,
+        cover: asset("book_wolf.webp"),
+        alt: "Обложка книги «Белый волк» — мистериальная повесть Благомира Гринькова",
+      },
+      {
+        title: "Великие мантры Упанишад",
+        text: "Инициация в высшую мудрость: великие мантры и Упанишады.",
+        platform: "Читать на Литрес",
+        href: links.bookMantras,
+        cover: asset("book_mantras.webp"),
+        alt: "Обложка книги «Великие мантры Упанишад» — инициация в высшую мудрость, Благомир Шиванатха Тапасви",
+      },
+    ],
+    more: {
+      title: "Другие книги автора",
+      href: links.authorLitres,
+    },
+  },
+  retreats: {
+    num: "07",
+    kicker: "Ближайший ретрит",
+    badge: "Набор открыт",
+    title: "Аруначала. Путь к Источнику",
+    meta: ["2–12 января 2027", "Тируваннамалай, Индия", "11 дней садханы"],
+    text: "Живой ретрит у подножия священной горы: утренняя садхана, сатсанги, храм Аруначалешвары, Раманашрам и круг гиривалам. Проживание в отеле группы и завтраки включены.",
+    price: "от $1 800 · продолжение в Каши (Варанаси, 13–16 января) +$1 100",
+    image: asset("retreat.jpg"),
+    cta: "Забронировать место",
+    secondaryCta: "Смотреть программу",
+  },
+  master: {
+    num: "08",
+    kicker: "Парампара",
+    title: "О мастере и традиции",
+    facts: [
+      "Хранитель Шива Дева-Парампары — линии передачи духовного знания.",
+      "Автор системы «Путь Дхармы» и метода Neo PSY.",
+      "Служение соединяет знание, практику и сообщество.",
+    ],
+    cta: "Познакомиться с учением",
+  },
+};
+
+export const footer = {
+  title: "Связаться",
+  columns: [
+    {
+      heading: "Прямой контакт",
+      items: [
+        { label: "Личный Telegram", href: links.telegramPersonal },
+        { label: "Открытый Telegram", href: links.telegramOpen },
+        { label: "YouTube", href: links.youtube },
+      ],
+    },
+    {
+      heading: "Разделы",
+      items: [
+        { label: "Система «Путь Дхармы»", href: "/#dharma" },
+        { label: "Школа ДХАРМА108", href: "/#school" },
+        { label: "Книги и аудио", href: "/#books" },
+        { label: "Ретриты", href: "/#retreats" },
+      ],
+    },
+    {
+      heading: "Правовое",
+      items: [
+        { label: "Политика конфиденциальности", href: "/politika-konfidencialnosti" },
+        { label: "Реквизиты", href: "https://t.me/shivanatha_tapasvi/2859" },
+      ],
+    },
+  ],
+  copyright: "© 2026 ДХАРМА108 · Шива Дева-Парампара · Свами Благомир",
+};
