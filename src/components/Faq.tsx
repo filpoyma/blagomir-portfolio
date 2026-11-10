@@ -10,7 +10,7 @@ export function Faq() {
       id="faq"
       data-testid="faq-section"
       aria-labelledby="faq-heading"
-      className="border-t border-linec bg-ivory py-20 sm:py-28"
+      className="section-screen border-t border-linec bg-ivory py-20 sm:py-28"
     >
       <div className="wrap">
         <div id="faq-heading">

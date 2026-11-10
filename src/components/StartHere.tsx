@@ -28,7 +28,7 @@ const cards = [
 
 export function StartHere() {
   return (
-    <section id="start" data-testid="start-section" className="bg-ivory py-20 sm:py-28">
+    <section id="start" data-testid="start-section" className="section-screen bg-ivory py-20 sm:py-28">
       <div className="wrap">
         <SectionHead
           num={sections.start.num}

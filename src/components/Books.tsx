@@ -10,7 +10,7 @@ export function Books() {
     <section
       id="books"
       data-testid="books-section"
-      className="border-y border-linec bg-card py-20 sm:py-28"
+      className="section-screen border-y border-linec bg-card py-20 sm:py-28"
     >
       <div className="wrap">
         <SectionHead num={s.num} kicker={s.kicker} title={s.title} />

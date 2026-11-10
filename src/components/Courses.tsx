@@ -6,7 +6,7 @@ import { Reveal, SectionHead } from "./Reveal";
 export function Courses() {
   const s = sections.courses;
   return (
-    <section id="courses" data-testid="courses-section" className="bg-ivory py-20 sm:py-28">
+    <section id="courses" data-testid="courses-section" className="section-screen bg-ivory py-20 sm:py-28">
       <div className="wrap">
         <SectionHead num={s.num} kicker={s.kicker} title={s.title} />
         <div className="mt-12">

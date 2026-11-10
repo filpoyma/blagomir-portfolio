@@ -9,7 +9,7 @@ export function Parampara() {
     <section
       id="master"
       data-testid="master-section"
-      className="relative overflow-hidden py-20 sm:py-28"
+      className="section-screen relative overflow-hidden py-20 sm:py-28"
       style={{ backgroundColor: "#0F172A" }}
     >
       <div

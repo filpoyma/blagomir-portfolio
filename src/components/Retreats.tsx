@@ -7,7 +7,7 @@ import { Reveal, SectionHead } from "./Reveal";
 export function Retreats() {
   const s = sections.retreats;
   return (
-    <section id="retreats" data-testid="retreats-section" className="bg-ivory py-20 sm:py-28">
+    <section id="retreats" data-testid="retreats-section" className="section-screen bg-ivory py-20 sm:py-28">
       <div className="wrap">
         <SectionHead num={s.num} kicker="Ретриты и события" />
         <Reveal delay={0.15}>

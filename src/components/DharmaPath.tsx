@@ -9,7 +9,7 @@ export function DharmaPath() {
     <section
       id="dharma"
       data-testid="dharma-section"
-      className="border-y border-linec bg-card py-20 sm:py-28"
+      className="section-screen border-y border-linec bg-card py-20 sm:py-28"
     >
       <div className="wrap">
         <SectionHead num={s.num} kicker={s.kicker} title={s.title} text={s.text} />

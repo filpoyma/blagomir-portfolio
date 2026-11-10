@@ -117,7 +117,7 @@ export function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative overflow-hidden bg-deep"
+      className="relative flex min-h-dvh flex-col overflow-hidden bg-deep"
       style={{ backgroundColor: "#0F172A" }}
     >
       <div
@@ -141,7 +141,7 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="wrap relative grid items-center gap-14 pb-20 pt-32 sm:pt-36 lg:grid-cols-12 lg:gap-10 lg:pb-28 lg:pt-44">
+      <div className="wrap relative my-auto grid w-full items-center gap-14 pb-20 pt-32 sm:pt-36 lg:grid-cols-12 lg:gap-10 lg:pb-28 lg:pt-44">
         <div className="lg:col-span-7">
           <LineReveal delay={0.05}>
             <span className="kicker inline-flex items-center gap-3 text-gold">
