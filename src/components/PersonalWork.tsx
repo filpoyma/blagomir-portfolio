@@ -34,7 +34,7 @@ export function PersonalWork() {
             data-testid="formats-booking-link"
             className="mt-8 inline-flex min-h-[48px] items-center border-b border-gold pb-1 text-sm font-semibold text-deep transition-colors duration-200 hover:text-goldhover"
           >
-            Запись на консультации
+            Запись на консультацию
           </a>
         </Reveal>
       </div>

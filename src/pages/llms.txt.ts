@@ -23,7 +23,7 @@ export const GET: APIRoute = ({ site }) => {
     "",
     "## Личные форматы работы",
     ...sections.formats.items.map((item) => `- **${item.title}**: ${item.text}`),
-    `- Запись на консультации: ${links.telegramConsultation}`,
+    `- Запись на консультацию: ${links.telegramConsultation}`,
     "",
     "## Программы обучения",
     ...sections.courses.items.map(
