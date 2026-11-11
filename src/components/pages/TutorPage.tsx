@@ -17,6 +17,8 @@ import { Footer } from "../Footer";
 
 export function TutorPage() {
   useEffect(() => {
+    window.dispatchEvent(new Event("dharma:ready"));
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const lenis = new Lenis({ lerp: 0.09 });

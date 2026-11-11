@@ -53,6 +53,7 @@ const robotsContent = noindex
     <link rel="alternate" type="text/plain" title="LLMs summary" href="/llms.txt" />
     <link rel="alternate" type="text/plain" title="LLMs full context" href="/llms-full.txt" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/images/dharma-wheel.svg" as="image" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,8 +92,83 @@ const robotsContent = noindex
         />
       )
     }
+
+    <style is:inline>
+      #dharma-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #0f172a;
+        background-image:
+          radial-gradient(90% 55% at 78% 12%, rgba(212, 175, 55, 0.13) 0%, rgba(15, 23, 42, 0) 60%),
+          radial-gradient(70% 50% at 8% 88%, rgba(17, 75, 78, 0.35) 0%, rgba(15, 23, 42, 0) 65%);
+        transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.55s;
+      }
+      html:has(#dharma-preloader:not(.is-hidden)) body {
+        background-color: #0f172a;
+      }
+      #dharma-preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .dharma-wheel-svg {
+        display: block;
+        width: 112px;
+        height: 112px;
+        object-fit: contain;
+        animation: dharma-wheel-spin 9s linear infinite;
+      }
+      @keyframes dharma-wheel-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .dharma-wheel-svg {
+          animation-duration: 24s;
+        }
+      }
+    </style>
   </head>
   <body class="min-h-full flex flex-col">
+    <div id="dharma-preloader" aria-hidden="true">
+      <img
+        class="dharma-wheel-svg"
+        src="/images/dharma-wheel.svg"
+        width="112"
+        height="112"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+      />
+    </div>
+
     <slot />
+
+    <script is:inline>
+      (function () {
+        var el = document.getElementById("dharma-preloader");
+        if (!el) return;
+        var done = false;
+        function hide() {
+          if (done) return;
+          done = true;
+          el.classList.add("is-hidden");
+          setTimeout(function () {
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+          }, 600);
+        }
+        window.addEventListener("dharma:ready", hide, { once: true });
+        setTimeout(hide, 4000);
+      })();
+    </script>
   </body>
 </html>
