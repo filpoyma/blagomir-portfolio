@@ -1,12 +1,12 @@
 import type { APIRoute } from "astro";
-import { brand, links, sections, teacher } from "../components/content";
+import { brand, faqAnswerText, links, sections, teacher } from "../components/content";
 import { DEFAULT_SITE_URL } from "../components/seo";
 
 export const GET: APIRoute = ({ site }) => {
   const origin = (site?.origin ?? DEFAULT_SITE_URL).replace(/\/$/, "");
 
   const faqBlock = sections.faq.items
-    .map((item) => `### В: ${item.q}\nО: ${item.a}`)
+    .map((item) => `### В: ${item.q}\nО: ${faqAnswerText(item)}`)
     .join("\n\n");
 
   const body = `# ${teacher.fullName} — ${brand.name} (Полный справочник для ИИ и поисковых систем)
@@ -26,8 +26,7 @@ ${sections.dharma.text}
 ${sections.dharma.steps.map((s) => `${s.num}. ${s.title} — ${s.text}`).join("\n")}
 
 ## Школа ДХАРМА108
-${sections.school.text}
-Разделы внутри Школы: ${sections.school.inside.join(", ")}.
+${sections.school.paragraphs.join("\n\n")}
 Точка входа: ${links.school}
 
 ## Индивидуальные и малые форматы
@@ -49,16 +48,19 @@ ${sections.books.items.map((b) => `- «${b.title}»: ${b.text} — ${b.href}`).j
 Описание: ${sections.retreats.text}
 Условия участия: ${sections.retreats.price}
 Официальный сайт ретрита: ${links.retreats}
+${sections.retreats.upcoming
+  .map((e) => `\nНазвание: ${e.title}\nПараметры: ${e.meta.join(" | ")}\nСтоимость: ${e.price}\nПодробности: ${e.href}`)
+  .join("\n")}
 
 ## Прямые ответы на частые вопросы (AEO / FAQ)
 
 ${faqBlock}
 
 ## Проверенные официальные каналы
-- YouTube: ${links.youtubeStart}
+- YouTube: ${links.youtube}
 - YouTube (архивный URL канала): ${links.youtube}
 - Открытый Telegram-канал сообщества: ${links.telegramOpen}
-- Личный Telegram для консультаций: ${links.telegramPersonal}
+- Личный Telegram для консультаций: ${links.telegramConsultation}
 - Бот вступления в Школу ДХАРМА108: ${links.school}
 - Реквизиты: https://t.me/shivanatha_tapasvi/2859
 - Политика конфиденциальности: ${origin}/politika-konfidencialnosti

@@ -32,7 +32,7 @@ export function Courses() {
                   data-testid={`course-cta-${i + 1}`}
                   className="inline-flex min-h-[36px] items-center justify-self-start rounded-full border border-deep/15 px-4 text-xs font-semibold uppercase tracking-[0.18em] text-deep/60 transition-colors duration-200 hover:border-gold hover:text-goldhover"
                 >
-                  Канал
+                  Подробнее
                 </a>
               </div>
             </Reveal>
@@ -40,7 +40,7 @@ export function Courses() {
         </div>
         <Reveal delay={0.2}>
           <a
-            href={links.telegramOpen}
+            href={links.telegrammTrainingPrograms}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="courses-all-link"

@@ -11,23 +11,14 @@ export function Logo({ light = true, compact = false }: TLogoProps) {
       className="group inline-flex items-center gap-3"
       aria-label="ДХАРМА108 — на главную"
     >
-      <svg
+      <img
+        src="/images/dharma-wheel.svg"
         width="34"
         height="34"
-        viewBox="0 0 64 64"
+        alt=""
         aria-hidden="true"
-        className="shrink-0 transition-transform duration-300 group-hover:rotate-[8deg]"
-      >
-        <rect width="64" height="64" rx="14" fill={light ? "#0C1322" : "#0F172A"} />
-        <g stroke="#D4AF37" strokeWidth="3" strokeLinecap="round" fill="none">
-          <path d="M32 11v35" />
-          <path d="M21 17v9c0 7.5 4.6 11 11 12.5" />
-          <path d="M43 17v9c0 7.5-4.6 11-11 12.5" />
-          <path d="M23 46h18" />
-          <path d="M27 53h10" />
-        </g>
-        <circle cx="32" cy="9.5" r="2.6" fill="#D9531E" />
-      </svg>
+        className="shrink-0 motion-safe:animate-[spin_8s_linear_infinite_paused] group-hover:[animation-play-state:running]"
+      />
       <span className="flex flex-col leading-none">
         <span
           className={`font-display text-xl font-semibold tracking-[0.08em] ${

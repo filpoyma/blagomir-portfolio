@@ -1,5 +1,5 @@
 import { site } from "../configs/settings";
-import { brand, links, sections, teacher } from "./content";
+import { brand, faqAnswerText, links, sections, teacher } from "./content";
 
 export const SITE_NAME = brand.name;
 export const DEFAULT_SITE_URL = site.url;
@@ -54,7 +54,7 @@ export function buildHomeJsonLd(siteOrigin: string) {
         mainEntity: { "@id": personId },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: `${origin}/sites/tutor-page/images/og.jpg`,
+          url: `${origin}/images/og.jpg`,
           width: 1200,
           height: 629,
         },
@@ -102,7 +102,7 @@ export function buildHomeJsonLd(siteOrigin: string) {
         name: `Школа ${brand.name}`,
         alternateName: [brand.name, "Система «Путь Дхармы»"],
         url: `${origin}/#school`,
-        logo: `${origin}/sites/tutor-page/favicon.svg`,
+        logo: `${origin}/favicon.svg`,
         description: sections.school.text,
         founder: { "@id": personId },
         sameAs: [links.telegramOpen, links.school, links.youtube],
@@ -172,7 +172,7 @@ export function buildHomeJsonLd(siteOrigin: string) {
           name: item.q,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.a,
+            text: faqAnswerText(item),
           },
         })),
       },

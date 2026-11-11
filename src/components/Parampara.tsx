@@ -1,6 +1,7 @@
 "use client";
 
-import { sections, teacher } from "./content";
+import { ArrowUpRight } from "lucide-react";
+import { links, sections, teacher } from "./content";
 import { Reveal, SectionHead } from "./Reveal";
 
 export function Parampara() {
@@ -38,7 +39,7 @@ export function Parampara() {
               aria-hidden="true"
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-gold/50 bg-ink px-6 py-2 font-display text-sm italic text-gold"
             >
-              Шива Дева-Парампара
+              Свами Благомир Шиванатха Тапасви
             </span>
           </div>
         </Reveal>
@@ -59,9 +60,15 @@ export function Parampara() {
             ))}
           </ul>
           <Reveal delay={0.35}>
-            <a href="#start" data-testid="master-cta" className="btn-gold mt-10">
+            <a
+              href={links.school}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="master-cta"
+              className="btn-gold mt-10"
+            >
               {s.cta}
-              <span aria-hidden="true">↓</span>
+              <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </Reveal>
         </div>

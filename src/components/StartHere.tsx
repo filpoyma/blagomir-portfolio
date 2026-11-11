@@ -19,9 +19,9 @@ const cards = [
     icon: Send,
     label: "Открытый канал",
     title: "Telegram",
-    text: "Регулярные публикации и живое общение сообщества.",
+    text: "Регулярные публикации сообщества.",
     cta: "Подписаться",
-    href: links.telegramOpen,
+    href: links.telegrammMaster,
     testid: "start-telegram-btn",
   },
 ];

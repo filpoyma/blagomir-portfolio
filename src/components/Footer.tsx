@@ -1,17 +1,17 @@
 "use client";
 
 import { Send, ArrowUp, type LucideIcon } from "lucide-react";
-import { footer, links } from "./content";
-import { YoutubeIcon } from "./icons";
+import { footer, links, type TFooterLinkIcon } from "./content";
+import { VkIcon, YoutubeIcon } from "./icons";
 import { Logo } from "./Logo";
 import { Reveal, Soon } from "./Reveal";
 
-type TFooterIcon = LucideIcon | typeof YoutubeIcon;
+type TFooterIcon = LucideIcon | typeof VkIcon | typeof YoutubeIcon;
 
-const iconFor: Record<string, TFooterIcon> = {
-  YouTube: YoutubeIcon,
-  "Личный Telegram": Send,
-  "Открытый Telegram": Send,
+const iconFor: Record<TFooterLinkIcon, TFooterIcon> = {
+  vk: VkIcon,
+  youtube: YoutubeIcon,
+  send: Send,
 };
 
 export function Footer() {
@@ -33,14 +33,14 @@ export function Footer() {
               </p>
             </div>
             <a
-              href={links.telegramPersonal}
+              href={links.telegrammTrainingPrograms}
               target="_blank"
               rel="noopener noreferrer"
-              data-testid="footer-personal-telegram"
+              data-testid="footer-start-training"
               className="btn-gold w-fit"
             >
               <Send size={17} aria-hidden="true" />
-              Личный Telegram
+              Начать обучение
             </a>
           </div>
         </Reveal>
@@ -73,7 +73,8 @@ export function Footer() {
                         className="inline-flex min-h-[44px] items-center gap-2 text-sm font-light text-ivory/70 transition-colors duration-200 hover:text-gold"
                       >
                         {(() => {
-                          const Icon = iconFor[item.label];
+                          const Icon =
+                            "icon" in item && item.icon ? iconFor[item.icon] : undefined;
                           return Icon ? <Icon size={15} aria-hidden="true" /> : null;
                         })()}
                         {item.label}

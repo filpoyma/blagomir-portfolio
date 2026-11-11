@@ -1,9 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-512 -512 1024 1024" role="img" aria-label="Dharma wheel">
+  <defs>
+    <g id="ornament-major">
+      <path d="M-34,-402 h68 v-14 h-68 Z" fill="#F7BD1E"/>
+      <circle cx="-44" cy="-428" r="30" fill="#FFD84A"/>
+      <circle cx="44" cy="-428" r="30" fill="#FFD84A"/>
+      <path d="M-44,-428 m-14,10 q10,-22 34,-18" fill="none" stroke="#F2A90F" stroke-width="5"/>
+      <path d="M44,-428 m14,10 q-10,-22 -34,-18" fill="none" stroke="#F2A90F" stroke-width="5"/>
+      <path d="M0,-398 C-38,-410 -36,-468 0,-494 C36,-468 38,-410 0,-398 Z" fill="#FFD84A"/>
+      <path d="M0,-412 C-18,-422 -18,-456 0,-474" fill="none" stroke="#F2A90F" stroke-width="5"/>
+    </g>
+    <g id="ornament-minor">
+      <path d="M-26,-394 h52 v-14 h-52 Z" fill="#F7BD1E"/>
+      <circle cx="-26" cy="-424" r="24" fill="#FFD84A"/>
+      <circle cx="26" cy="-424" r="24" fill="#FFD84A"/>
+      <path d="M0,-400 C-26,-410 -24,-450 0,-466 C24,-450 26,-410 0,-400 Z" fill="#FFD84A"/>
+      <path d="M0,-412 C-12,-420 -12,-444 0,-452" fill="none" stroke="#F2A90F" stroke-width="5"/>
+    </g>
+    <g id="spoke">
+      <path d="M-19,-312 L19,-312 L19,-246 L32,-222 L21,-198 L15,-134 L24,-104 L-24,-104 L-15,-134 L-21,-198 L-32,-222 L-19,-246 Z" fill="#FFD84A"/>
+      <path d="M0,-306 V-246 M0,-198 V-110" fill="none" stroke="#F2A90F" stroke-width="5"/>
+      <path d="M0,-236 L7,-222 L0,-208 L-7,-222 Z" fill="#F2A90F"/>
+    </g>
+    <g id="rivet">
+      <circle cx="0" cy="-366" r="10" fill="#F2A90F"/>
+    </g>
+  </defs>
+
+  <g stroke="#9A5A12" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <g>
+      <use xlink:href="#ornament-major"/>
+      <use xlink:href="#ornament-major" transform="rotate(90)"/>
+      <use xlink:href="#ornament-major" transform="rotate(180)"/>
+      <use xlink:href="#ornament-major" transform="rotate(270)"/>
+      <use xlink:href="#ornament-minor" transform="rotate(45)"/>
+      <use xlink:href="#ornament-minor" transform="rotate(135)"/>
+      <use xlink:href="#ornament-minor" transform="rotate(225)"/>
+      <use xlink:href="#ornament-minor" transform="rotate(315)"/>
+    </g>
+
+    <g>
+      <use xlink:href="#spoke"/>
+      <use xlink:href="#spoke" transform="rotate(45)"/>
+      <use xlink:href="#spoke" transform="rotate(90)"/>
+      <use xlink:href="#spoke" transform="rotate(135)"/>
+      <use xlink:href="#spoke" transform="rotate(180)"/>
+      <use xlink:href="#spoke" transform="rotate(225)"/>
+      <use xlink:href="#spoke" transform="rotate(270)"/>
+      <use xlink:href="#spoke" transform="rotate(315)"/>
+    </g>
+
+    <path fill="#FFD84A" fill-rule="evenodd" d="M0,-398 A398,398 0 1,0 0,398 A398,398 0 1,0 0,-398 Z M0,-306 A306,306 0 1,1 0,306 A306,306 0 1,1 0,-306 Z"/>
+    <path fill="#F7BD1E" fill-rule="evenodd" stroke="none" d="M0,-332 A332,332 0 1,0 0,332 A332,332 0 1,0 0,-332 Z M0,-306 A306,306 0 1,1 0,306 A306,306 0 1,1 0,-306 Z"/>
+    <circle r="332" fill="none"/>
+    <circle r="306" fill="none"/>
+
+    <g stroke-width="5">
+      <use xlink:href="#rivet"/>
+      <use xlink:href="#rivet" transform="rotate(45)"/>
+      <use xlink:href="#rivet" transform="rotate(90)"/>
+      <use xlink:href="#rivet" transform="rotate(135)"/>
+      <use xlink:href="#rivet" transform="rotate(180)"/>
+      <use xlink:href="#rivet" transform="rotate(225)"/>
+      <use xlink:href="#rivet" transform="rotate(270)"/>
+      <use xlink:href="#rivet" transform="rotate(315)"/>
+    </g>
+
+    <circle r="106" fill="#FFD84A"/>
+    <circle r="80" fill="#F7BD1E"/>
+    <g fill="#FFD84A" stroke-width="5">
+      <path d="M0,0 A36,36 0 0,1 0,-72 A72,72 0 0,1 62.35,36 A36,36 0 0,0 0,0 Z"/>
+      <path d="M0,0 A36,36 0 0,1 62.35,36 A72,72 0 0,1 -62.35,36 A36,36 0 0,0 0,0 Z" fill="#FFE27A"/>
+      <path d="M0,0 A36,36 0 0,1 -62.35,36 A72,72 0 0,1 0,-72 A36,36 0 0,0 0,0 Z" fill="#F7C83A"/>
+    </g>
+  </g>
 </svg>

@@ -28,7 +28,7 @@ export function PersonalWork() {
         </div>
         <Reveal delay={0.2}>
           <a
-            href={links.telegramPersonal}
+            href={links.telegramConsultation}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="formats-booking-link"

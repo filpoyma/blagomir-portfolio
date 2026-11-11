@@ -34,5 +34,5 @@ src/
   components/                    # React UI
   components/pages/              # page shells (TutorPage, PrivacyPage)
   styles/global.css
-public/sites/tutor-page/         # images + favicon
+public/images/                   # photos, covers, og
 ```
