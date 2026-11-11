@@ -31,13 +31,13 @@ export function DharmaPath() {
         </div>
         <Reveal delay={0.2}>
           <a
-            href={links.youtube}
+            href={links.telegrammTrainingPrograms}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="dharma-system-link"
             className="mt-14 inline-flex min-h-[48px] items-center border-b border-gold pb-1 text-sm font-semibold text-deep transition-colors duration-200 hover:text-goldhover"
           >
-            Узнать о системе — знакомство с учением на YouTube
+            Узнать о системе
           </a>
         </Reveal>
       </div>

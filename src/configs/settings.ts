@@ -1,3 +1,3 @@
 export const site = {
-    url: "https://dharma108.onrender.com/",
+    url: "https://dharma108.org/",
   };
