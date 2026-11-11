@@ -31,7 +31,7 @@ export function DharmaPath() {
         </div>
         <Reveal delay={0.2}>
           <a
-            href={links.system}
+            href={links.youtube}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="dharma-system-link"
