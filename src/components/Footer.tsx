@@ -58,14 +58,18 @@ export function Footer() {
                       <a
                         href={item.href}
                         target={
-                          item.href.startsWith("#") || item.href.startsWith("/")
-                            ? undefined
-                            : "_blank"
+                          "newTab" in item && item.newTab
+                            ? "_blank"
+                            : item.href.startsWith("#") || item.href.startsWith("/")
+                              ? undefined
+                              : "_blank"
                         }
                         rel={
-                          item.href.startsWith("#") || item.href.startsWith("/")
-                            ? undefined
-                            : "noopener noreferrer"
+                          "newTab" in item && item.newTab
+                            ? "noopener"
+                            : item.href.startsWith("#") || item.href.startsWith("/")
+                              ? undefined
+                              : "noopener noreferrer"
                         }
                         data-testid={`footer-link-${item.label
                           .toLowerCase()

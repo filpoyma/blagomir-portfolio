@@ -56,6 +56,7 @@ export const links = {
     "https://www.litres.ru/book/blagomir-grin-kov-34081892/velikie-mantry-upanishad-74522922/",
   authorLitres: "https://www.litres.ru/author/blagomir-grin-kov-34081892/",
   retreats: "https://dharma-retreat.org/",
+  donation: "https://t.me/shivanatha_tapasvi/2859",
 };
 
 export const heroCta = [
@@ -90,6 +91,7 @@ export const navLinks = [
   { label: "Форматы", href: "#formats" },
   { label: "Книги", href: "#books" },
   { label: "Ретриты", href: "#retreats" },
+  { label: "Дана", href: "#dana" },
 ];
 
 export const sections = {
@@ -274,8 +276,16 @@ export const sections = {
     ],
     cta: "Познакомиться с учением",
   },
-  faq: {
+  dana: {
     num: "09",
+    kicker: "Дхарма-дана",
+    title: "Поддержать открытое служение",
+    text: "Ваши пожертвования помогают создавать новые лекции, публикации, видео, аудиоматериалы и продолжать делиться знаниями Дхармы в открытом доступе.",
+    gratitude: "Благодарю каждого за участие и поддержку 🙏🏻",
+    cta: "Реквизиты для пожертвования",
+  },
+  faq: {
+    num: "10",
     kicker: "Вопросы и ответы",
     title: "Частые вопросы об учении и форматах",
     text: "Краткие ответы для тех, кто впервые знакомится с системой «Путь Дхармы», Школой ДХАРМА108 и личной работой со Свами Благомиром.",
@@ -344,6 +354,7 @@ export const footer = {
         { label: "Школа ДХАРМА108", href: "/#school" },
         { label: "Книги и аудио", href: "/#books" },
         { label: "Ретриты", href: "/#retreats" },
+        { label: "Дхарма-дана", href: "/#dana" },
       ],
     },
     {
@@ -352,8 +363,9 @@ export const footer = {
         {
           label: "Политика конфиденциальности",
           href: "/politika-konfidencialnosti",
+          newTab: true,
         },
-        { label: "Реквизиты", href: "https://t.me/shivanatha_tapasvi/2859" },
+        { label: "Реквизиты", href: links.donation },
       ],
     },
   ],

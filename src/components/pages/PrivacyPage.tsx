@@ -1,6 +1,8 @@
+"use client";
+
+import { useEffect, type MouseEvent } from "react";
 import { Footer } from "../Footer";
 import { Logo } from "../Logo";
-import { links } from "../content";
 import { privacyPage } from "../privacy-content";
 
 function linkify(text: string) {
@@ -23,19 +25,48 @@ function linkify(text: string) {
   });
 }
 
+const backToSiteClassHeader =
+  "text-sm font-medium text-ivory/70 transition-colors duration-200 hover:text-gold";
+const backToSiteClassArticle =
+  "mt-16 inline-flex min-h-[48px] items-center border-b border-gold pb-1 text-sm font-semibold text-deep transition-colors hover:text-goldhover";
+
+function onBackToSite(event: MouseEvent<HTMLAnchorElement>) {
+  if (window.history.length > 1) {
+    event.preventDefault();
+    window.history.back();
+    return;
+  }
+
+  const referrer = document.referrer;
+  if (!referrer) return;
+
+  try {
+    if (new URL(referrer).origin !== window.location.origin) return;
+  } catch {
+    return;
+  }
+
+  event.preventDefault();
+  window.close();
+  window.setTimeout(() => {
+    if (!window.closed) window.location.href = "/";
+  }, 150);
+}
+
 export function PrivacyPage() {
+  useEffect(() => {
+    queueMicrotask(() => {
+      window.dispatchEvent(new Event("dharma:ready"));
+    });
+  }, []);
+
   return (
     <>
       <header className="border-b border-linec bg-ink py-5" style={{ backgroundColor: "#0C1322" }}>
         <div className="wrap flex items-center justify-between gap-4">
           <Logo light compact />
-          <a
-            href={links.telegramOpen}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold !min-h-[44px] !px-5"
-          >
-            Открыть Telegram
+          <a href="/" className={backToSiteClassHeader} onClick={onBackToSite}>
+          Вернуться на главную 
           </a>
         </div>
       </header>
@@ -77,10 +108,7 @@ export function PrivacyPage() {
             ))}
           </div>
 
-          <a
-            href="/"
-            className="mt-16 inline-flex min-h-[48px] items-center border-b border-gold pb-1 text-sm font-semibold text-deep transition-colors hover:text-goldhover"
-          >
+          <a href="/" className={backToSiteClassArticle} onClick={onBackToSite}>
             Вернуться на главную
           </a>
         </article>

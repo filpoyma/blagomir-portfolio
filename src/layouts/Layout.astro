@@ -151,8 +151,6 @@ const robotsContent = noindex
       />
     </div>
 
-    <slot />
-
     <script is:inline>
       (function () {
         var el = document.getElementById("dharma-preloader");
@@ -170,5 +168,7 @@ const robotsContent = noindex
         setTimeout(hide, 4000);
       })();
     </script>
+
+    <slot />
   </body>
 </html>
