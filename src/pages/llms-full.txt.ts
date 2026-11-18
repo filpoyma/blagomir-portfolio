@@ -39,7 +39,7 @@ ${sections.courses.items.map((c, i) => `${i + 1}. ${c.title} — ${c.text} (${c.
 
 ## Книги и аудио (Литрес)
 ${sections.books.items.map((b) => `- «${b.title}»: ${b.text} — ${b.href}`).join("\n")}
-Страница автора: ${links.authorLitres}
+Страница автора: ${links.authorsBooks}
 
 ## Выездные ретриты
 Название: ${sections.retreats.title}

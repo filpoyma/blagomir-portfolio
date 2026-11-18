@@ -92,7 +92,7 @@ export function buildHomeJsonLd(siteOrigin: string) {
           links.telegramOpen,
           links.telegramPersonal,
           links.school,
-          links.authorLitres,
+          links.authorsBooks,
           links.retreats,
         ],
       },

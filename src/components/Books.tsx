@@ -24,7 +24,7 @@ export function Books() {
                 data-testid={`book-card-${i + 1}`}
                 className="card-light group flex h-full flex-col p-5 transition-all duration-200 hover:-translate-y-1 hover:border-gold/60 sm:p-6"
               >
-                <div className="relative overflow-hidden rounded-md">
+                <div className="relative aspect-[415/594] w-full overflow-hidden rounded-md">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={book.cover}
@@ -32,7 +32,7 @@ export function Books() {
                     width={415}
                     height={594}
                     loading="lazy"
-                    className="block w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="block h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     data-testid={`book-cover-${i + 1}`}
                   />
                 </div>

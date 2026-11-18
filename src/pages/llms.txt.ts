@@ -34,7 +34,7 @@ export const GET: APIRoute = ({ site }) => {
     ...sections.books.items.map(
       (b) => `- [${b.title}](${b.href}): ${b.text}`
     ),
-    `- [Все книги автора на Литрес](${links.authorLitres})`,
+    `- [Все книги автора на Литрес](${links.authorsBooks})`,
     "",
     "## Ретриты",
     `- **${sections.retreats.title}** (${sections.retreats.meta.join(" · ")}): ${sections.retreats.text} Стоимость: ${sections.retreats.price}. Подробности: ${links.retreats}`,

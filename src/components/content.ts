@@ -48,13 +48,12 @@ export const links = {
   telegramPersonal: "https://t.me/blagomir_dharma",
   telegramConsultation: "https://t.me/vedabali/36880",
   telegrammMaster: "https://t.me/shivanatha_tapasvi",
-  bookSacral:
-    "https://www.litres.ru/book/blagomir-grin-kov-34081892/sakral-naia-numerologiia-74522973/",
+  bookSacral: "https://t.me/vedabali/28186",
   bookWolf:
     "https://www.litres.ru/book/blagomir-grin-kov-34081892/belyi-volk-74523127/",
   bookMantras:
     "https://www.litres.ru/book/blagomir-grin-kov-34081892/velikie-mantry-upanishad-74522922/",
-  authorLitres: "https://www.litres.ru/author/blagomir-grin-kov-34081892/",
+  authorsBooks: "https://t.me/vedabali/28185",
   retreats: "https://dharma-retreat.org/",
   donation: "https://t.me/shivanatha_tapasvi/2859",
 };
@@ -93,6 +92,11 @@ export const navLinks = [
   { label: "Ретриты", href: "#retreats" },
   { label: "Дана", href: "#dana" },
 ];
+
+const readingPlatforms = {
+  litres: "Читать на Литрес",
+  tg: "Читать в Telegram",
+};
 
 export const sections = {
   start: {
@@ -211,31 +215,31 @@ export const sections = {
       {
         title: "Сакральная нумерология",
         text: "Все тайны чисел в одной книге: смысл чисел в характере и судьбе.",
-        platform: "Читать на Литрес",
+        platform: readingPlatforms.tg,
         href: links.bookSacral,
         cover: asset("book_cover.webp"),
         alt: "Обложка книги «Сакральная нумерология» — Благомир Гриньков, все тайны чисел в одной книге",
       },
       {
-        title: "Белый волк",
-        text: "Мистериальная повесть — художественное повествование о пути через испытания.",
-        platform: "Читать на Литрес",
+        title: "Исцеление токсичных отношений.",
+        text: "Духовные, психологические и практические методы освобождения от созависимости и деструктивных связей.",
+        platform: readingPlatforms.tg,
         href: links.bookWolf,
-        cover: asset("book_wolf.webp"),
-        alt: "Обложка книги «Белый волк» — мистериальная повесть Благомира Гринькова",
+        cover: asset("book_toxic_relationships.webp"),
+        alt: "Обложка книги «Исцеление токсичных отношений» — Благомир Гриньков",
       },
       {
-        title: "Великие мантры Упанишад",
-        text: "Инициация в высшую мудрость: великие мантры и Упанишады.",
-        platform: "Читать на Литрес",
+        title: "Как решить проблемы с деньгами, кредитами и долгами",
+        text: "Фундаментальный философско-практический трактат об онтологии финансового мышления, природе материальной обусловленности и путях обретения благополучия.",
+        platform: readingPlatforms.tg,
         href: links.bookMantras,
-        cover: asset("book_mantras.webp"),
-        alt: "Обложка книги «Великие мантры Упанишад» — инициация в высшую мудрость, Благомир Шиванатха Тапасви",
+        cover: asset("book_money_debts.webp"),
+        alt: "Обложка книги «Как решить проблемы с деньгами, кредитами и долгами» — Благомир Шиванатха Тапасви",
       },
     ],
     more: {
       title: "Другие книги автора",
-      href: links.authorLitres,
+      href: links.authorsBooks,
     },
   },
   retreats: {
